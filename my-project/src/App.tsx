@@ -3,6 +3,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+import { Button } from './Button.tsx'
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -20,9 +22,9 @@ function App() {
         <div>
           <div className="card">
             <h1 className="text-3xl font-bold">Vite + React</h1>
-            <button className="rounded-xl bg-sky-500 hover:bg-sky-700" onClick={() => setCount((count) => count + 1)}>
+            <Button variant="primary" onClick={() => setCount((count) => count + 1)}>
               count is {count}
-            </button>
+            </Button>
             <p>
               Edit <code>src/App.tsx</code> and save to test HMR
             </p>
