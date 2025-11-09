@@ -8,7 +8,7 @@ import PageLayout from '../components/PageLayout';
 export default function Demo2() {
   return (
     <PageLayout gradientFrom="green-50" gradientTo="green-100">
-      <h1 className="text-4xl font-bold text-green-600 mb-8 text-center">
+      <h1 className="text-xl font-bold text-green-600 mb-8 text-center">
         Demo 2
       </h1>
 

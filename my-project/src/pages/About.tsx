@@ -8,7 +8,7 @@ import PageLayout from '../components/PageLayout';
 export default function About() {
   return (
     <PageLayout gradientFrom="gray-50" gradientTo="gray-100">
-      <h1 className="text-4xl font-bold text-gray-700 mb-8 text-center">
+      <h1 className="text-xl font-bold text-gray-700 mb-8 text-center">
         About
       </h1>
 
