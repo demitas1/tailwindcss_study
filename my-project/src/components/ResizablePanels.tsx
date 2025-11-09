@@ -2,10 +2,10 @@ import { useState, useRef, useEffect } from 'react';
 import type { ComponentType } from 'react';
 
 interface ResizablePanelsProps {
-  LeftComponent: ComponentType<any>;
-  RightComponent: ComponentType<any>;
-  leftProps?: Record<string, any>;
-  rightProps?: Record<string, any>;
+  LeftComponent: ComponentType<unknown>;
+  RightComponent: ComponentType<unknown>;
+  leftProps?: Record<string, unknown>;
+  rightProps?: Record<string, unknown>;
   initialLeftWidth?: number;
   minWidth?: number;
   maxWidth?: number;
