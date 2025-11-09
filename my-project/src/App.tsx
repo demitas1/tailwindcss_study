@@ -1,41 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router';
+import Home from './pages/Home';
+import Demo1 from './pages/Demo1';
+import Demo2 from './pages/Demo2';
+import Demo3 from './pages/Demo3';
+import About from './pages/About';
 
-import { Button } from './Button.tsx'
-
+/**
+ * メインAppコンポーネント
+ * React Router v7を使用してルーティングを設定
+ */
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div className="flex">
-        <div>
-          <div className="card">
-            <h1 className="text-3xl font-bold">Tailwind CSS</h1>
-          </div>
-          <div className="text-2xl font-bold">
-            Hello
-          </div>
-        </div>
-        <div>
-          <div className="card">
-            <h1 className="text-3xl font-bold">Vite + React</h1>
-            <Button variant="primary" onClick={() => setCount((count) => count + 1)}>
-              count is {count}
-            </Button>
-            <p>
-              Edit <code>src/App.tsx</code> and save to test HMR
-            </p>
-          </div>
-        </div>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/demo1" element={<Demo1 />} />
+        <Route path="/demo2" element={<Demo2 />} />
+        <Route path="/demo3" element={<Demo3 />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
