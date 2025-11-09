@@ -1,21 +1,34 @@
 import { useState, useRef, useEffect } from 'react';
+import type { ComponentType } from 'react';
 
-// リサイズ可能なパネルコンテナ
-function ResizablePanels({ 
-  LeftComponent, 
+interface ResizablePanelsProps {
+  LeftComponent: ComponentType<any>;
+  RightComponent: ComponentType<any>;
+  leftProps?: Record<string, any>;
+  rightProps?: Record<string, any>;
+  initialLeftWidth?: number;
+  minWidth?: number;
+  maxWidth?: number;
+}
+
+/**
+ * リサイズ可能なパネルコンテナ
+ */
+function ResizablePanels({
+  LeftComponent,
   RightComponent,
   leftProps = {},
   rightProps = {},
   initialLeftWidth = 50,
   minWidth = 10,
   maxWidth = 90
-}) {
+}: ResizablePanelsProps) {
   const [leftWidth, setLeftWidth] = useState(initialLeftWidth);
   const [isDragging, setIsDragging] = useState(false);
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       if (!isDragging || !containerRef.current) return;
 
       const container = containerRef.current;
@@ -57,8 +70,8 @@ function ResizablePanels({
 
       {/* リサイズハンドル */}
       <div
-        className={`w-1 bg-gray-300 hover:bg-blue-500 cursor-col-resize transition-colors ${
-          isDragging ? 'bg-blue-500' : ''
+        className={`w-1 bg-gray-300 dark:bg-gray-600 hover:bg-blue-500 dark:hover:bg-blue-400 cursor-col-resize transition-colors ${
+          isDragging ? 'bg-blue-500 dark:bg-blue-400' : ''
         }`}
         onMouseDown={() => setIsDragging(true)}
       />

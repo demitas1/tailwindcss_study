@@ -8,35 +8,35 @@ import PageLayout from '../components/PageLayout';
 export default function Home() {
   return (
     <PageLayout>
-      <h1 className="text-lg font-bold text-gray-500 mb-8 text-center">
+      <h1 className="text-lg font-bold text-gray-500 dark:text-gray-300 mb-8 text-center">
         Tailwind CSS v4 学習プロジェクト
       </h1>
 
       <nav className="space-y-4">
         <Link
           to="/demo1"
-          className="block w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-4 px-4 rounded-xl transition-colors duration-200 text-center"
+          className="block w-full bg-blue-300 hover:bg-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 text-white font-semibold py-4 px-4 rounded-xl transition-colors duration-200 text-center"
         >
           Demo 1
         </Link>
 
         <Link
           to="/demo2"
-          className="block w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-4 px-6 rounded-xl transition-colors duration-200 text-center"
+          className="block w-full bg-blue-500 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700 text-white font-semibold py-4 px-6 rounded-xl transition-colors duration-200 text-center"
         >
           Demo 2
         </Link>
 
         <Link
           to="/demo3"
-          className="block w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-4 px-6 rounded-xl transition-colors duration-200 text-center"
+          className="block w-full bg-blue-500 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700 text-white font-semibold py-4 px-6 rounded-xl transition-colors duration-200 text-center"
         >
           Demo 3
         </Link>
 
         <Link
           to="/about"
-          className="block w-full bg-gray-500 hover:bg-gray-600 text-white font-semibold py-4 px-6 rounded-xl transition-colors duration-200 text-center"
+          className="block w-full bg-gray-500 hover:bg-gray-600 dark:bg-gray-600 dark:hover:bg-gray-700 text-white font-semibold py-4 px-6 rounded-xl transition-colors duration-200 text-center"
         >
           About
         </Link>
